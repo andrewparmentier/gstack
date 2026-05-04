@@ -89,3 +89,23 @@ only when intentionally testing upstream behavior.
   (closes 2026-05-03 P3 TODO + 2026-05-04 recurrence)
 
 **Upstream tip at fork time:** `db9447c3` (gstack v1.26.3.0)
+
+## Update history
+
+- **2026-05-04** — Merged `upstream/main` (gstack v0.3.5 → v1.26.3.0) into
+  `amp/local-customizations`. Clean merge: 0 conflicts, 256 upstream commits
+  pulled in, 714 files added, 0 operator-touched files modified.
+  Pre-merge HEAD `ff3ea5c4`; merge commit `abfb86bb` (two parents:
+  `ff3ea5c4` local + `db9447c3` upstream).
+  Smoke tests passed:
+    - APFS clone integrity preserved (inode `176905347`, both paths
+      byte-identical at 10840 bytes)
+    - All 5 daemon-allowlist patterns still present in active /close
+    - close/SKILL.md and open/SKILL.md untouched (unchanged size + mtime,
+      operator commits `38646d8` + `b2fcf78` still at the head of close/
+      history)
+    - New plan-ceo-review and plan-eng-review skills valid (frontmatter
+      parses, no unrendered template placeholders)
+    - `bun install` clean — 224 packages installed, including newly-added
+      `@anthropic-ai/claude-agent-sdk@0.2.117`, `@huggingface/transformers`,
+      `puppeteer-core`, `marked`, `xterm`, `ngrok`
