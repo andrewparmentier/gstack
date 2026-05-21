@@ -1,6 +1,6 @@
 ---
 name: open
-version: 1.0.0
+version: 1.1.0
 description: |
   Session startup. Reads State Doc, TODOS.md, and prints a compact status summary.
   Use at the beginning of every Claude Code session.
@@ -20,6 +20,8 @@ Run this at the start of every session. Reads current system state and prints a 
 1. Read the State Doc at `06-Areas/Claude/State Doc - Current.md` (relative to BASECAMP vault root at `/Users/parmstar/Documents/OBSIDIAN MASTER/BASECAMP/`).
 
 2. Read TODOS.md at `06-Areas/Claude/TODOS.md`.
+
+2.5. Read `06-Areas/Claude/Operator Warnings.md` if it exists. Include the contents of its `## Active` section in the WARNINGS block of the printed summary (step 3), each line prefixed with `⚠️ Operator Warning:`. If the file is missing, or `## Active` holds only the `(none …)` placeholder, add nothing from it.
 
 3. Print a compact status summary in this exact format:
 
